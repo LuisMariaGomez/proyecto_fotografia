@@ -1,0 +1,6 @@
+$mapa: (
+    nada: none, /* map-get($mapa, nada) */ 
+    centro: center, /* map-get($mapa, centro) */ 
+    cubrir: cover, /* map-get($mapa, cubrir) */ 
+    grilla: grid, /* map-get($mapa, grilla) */ 
+);

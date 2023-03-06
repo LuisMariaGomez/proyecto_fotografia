@@ -1,0 +1,23 @@
+@mixin sizes_wh($width, $height){
+    width: $width; 
+    height: $height;
+}
+
+@mixin grids_parametros($display, $color_fondo){
+    display: $display;
+    background-color: $color_fondo;
+}
+
+@mixin font_color_family_size($color, $family, $size){
+    color: $color;
+    font-family: $family;
+    font-size: $size;
+}
+
+@mixin columnas($columnas){
+    grid-template-columns: repeat($columnas,1fr);
+}
+
+@mixin filas($filas){
+    grid-template-rows: repeat($filas,1fr);
+}

@@ -1,0 +1,540 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+/* Inicio / Cosas de Header*/
+
+.head{
+    position: absolute;
+    top: 0px;
+    display: flex;
+    height: 90px;
+    width: 100%;
+    justify-content:space-between;
+    align-items: center;
+    background-color: rgb(122, 25, 25, 0);
+}
+.logo{
+    width: 500px;
+    margin-left: 5px;
+    margin-top: 20px;
+}
+.listaLinks{
+    display: flex;
+    list-style: none;
+}
+.navHead{
+    color: lightgray;
+    font-weight: 200;
+    padding-right: 30px;
+    font-family: 'Outfit', sans-serif;
+    font-size: 21px;
+    text-decoration: none;
+}
+.navHead:hover{
+    transition: 1s;
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+}
+#linksFoot{
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Fin / Cosas de Header*/
+
+/* INICIO / Footer */
+
+.foot{
+    display: flex;
+    background-color: rgb(24, 24, 24);
+    justify-content: space-between;
+}
+.contenedoresFoot{
+    display: flex;
+    width: 25%;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.contenedorRedes{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+}
+.logoRedes{
+    height: 50px;
+    width: auto;
+    padding: 10px;
+}
+
+.contenedorRedes{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.contenedorSponsors{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.logoSponsors{
+    height: auto;
+    width: 100px;
+    padding: 10px;
+}
+.navFoot{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.navFootItem{
+    display: flex;
+    flex-direction: column;
+    font-weight: 200;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+.titulosFoot{
+    color: rgb(130, 130, 130);
+    font-family: 'Outfit', sans-serif;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+.contacto{
+    color: rgb(235, 235, 235);
+    font-family: 'Outfit', sans-serif;
+}
+
+/* FIN / Footer */
+
+/* Inicio / Body Index*/
+
+    /* Inicio / Imagenes superiores mimetizadas con el nav*/
+    .contenedorImgSup{
+        height: 830px;
+        background-position: center center;
+        background-repeat: none;
+        background-size: cover;
+        text-align: center;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #contenedorImgSup1{
+        background-image: url(../Imagenes/fotoMarce/blancoYnegro/1.jpg);
+    }
+    #contenedorImgSup2{
+        background-image: url(../Imagenes/fotoMarce/agua/1.jpg);
+    }
+    #contenedorImgSup3{
+        background-image: url(../Imagenes/fotoMarce/desnudos/1.jpg);
+    }
+    .letrasImgSup{
+        color: white;
+        font-family: 'Inter Tight', sans-serif;
+        font-size: 60px;
+        white-space: nowrap;
+        letter-spacing: 5px;
+    }
+    .subLetrasImgSup{
+        color: white;
+        font-family: 'Outfit', sans-serif;
+        font-size: 30px;
+        white-space: nowrap;
+        margin: 20px;
+        font-weight:bold;
+    }
+
+    .boton{
+        height: 15px;
+        width: auto;
+        color: white;
+        text-decoration: none;
+        transition: 0.2s;
+        border: 2px solid;
+        padding: 15px;
+        border-radius: 10px;
+    }
+    .boton:hover{
+        background: rgb(0, 0, 0, 0.587);
+    }
+
+    /* Inicio / Imagenes superiores mimetizadas con el nav*/
+
+    /* Inicio / Mitad pantalla imagenes, mitad escritura*/
+
+    .contenedor1{
+        display: flex;
+        align-items:center;
+        justify-content: space-around;
+        width: 100%;
+        background-color: black;
+    }
+    .contenedorImgMitadPag{
+        width: 100%;
+        text-align: center;
+    }
+    .imagenesMitad{
+        height: 600px;
+    }
+    .mitadPagTitulo{
+        color: white;
+        letter-spacing: 10px;
+        font-family: 'Inter Tight', sans-serif;
+    }
+    .mitadPagSubTitulo{
+        color: white;
+        font-family: 'Outfit', sans-serif;
+        margin: 20px;
+        margin-bottom: 40px;
+        font-size: 21px;
+    }
+    #boton2{
+        background-color: rgba(211, 211, 211, 0.172);
+    }
+    #boton2:hover{
+        background-color: rgb(135, 135, 135);
+    }
+
+
+    /* Fin / Mitad pantalla imagenes, mitad escritura*/
+
+    /* INICIO / Imagenen que ocupan el largo de pantalla pero no todo el alto y todo el ancho */
+
+    .segundaSeccion{
+        display: flex;
+        flex-direction: column;
+        background-image: url(../Imagenes/fotoMarce/desnudos/2.jpg);
+        background-size: cover;
+        background-position: 0px -250px;
+        height: 500px;
+        color: white;
+        align-items: center;
+        justify-content: center;
+        background-color: black;
+    }
+
+    /* FIN / Imagenen que ocupan el largo de pantalla pero no todo el alto y todo el ancho */
+
+    /* INICIO / Imagenes con titulo de que proyecto es*/
+
+    .tercerSección{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        padding: 40px;
+        background-color: black;
+        width: 100%;
+    }
+
+    .seccionProy{
+        height: 450px;
+        width: 70%;
+        background-size:cover;
+        background-repeat: no-repeat;
+        margin: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .titulosTercerSeccion{
+        font-family: 'Inter Tight', sans-serif;
+        font-size: 40px;
+        white-space: nowrap;
+        letter-spacing: 5px;    
+    }
+
+    .subTitulosTercerSeccion{
+        font-family: 'Outfit', sans-serif;
+        font-size: 30px;
+        white-space: nowrap;
+        letter-spacing: 5px;
+        margin-bottom: 10px;
+    }
+
+    #proy1{
+        background-image: url(../Imagenes/seccionProy/1.jpg);
+    }
+    #proy2{
+        background-image: url(../Imagenes/seccionProy/2.jpg);
+    }
+    #proy3{
+        background-image: url(../Imagenes/seccionProy/3.jpg);
+    }
+    #proy4{
+        background-image: url(../Imagenes/seccionProy/4.jpg);
+    }
+    #proy5{
+        background-image: url(../Imagenes/seccionProy/5.jpg);
+        background-position: 0px -180px;
+    }
+    #proy6{
+        background-image: url(../Imagenes/seccionProy/6.jpg);
+        background-position: 0px -200px;
+    }
+
+    /* FIN / Imagenes con titulo de que proyecto es*/
+
+    /* INICIO / 6 a 8 imagenes a lo largo sacadas de ig, enlazadas al mismo */
+
+    .cuartaSeccion{
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+    }
+    .contenedorTitulo{
+        display: flex;
+        background-color: black;
+        color: white;
+        justify-content: center;
+        padding-bottom: 20px;
+    }
+    .imgIG{
+        margin: 10px;
+        height: 140px;
+        width: auto;
+        padding-bottom: 30px;
+    }
+    .tituloSeccion{
+        font-family: 'Outfit', sans-serif;
+    }
+
+    /* INICIO / 6 a 8 imagenes a lo largo sacadas de ig, enlazadas al mismo */
+
+/* Fin / Cosas de Body Index */
+
+/* INICIO / Body Fotos */
+
+#contenedorImgSup5{
+    background-image: url(../imagenes/foto_marce/trenes/pagina_de_trenes/12.jpg);
+    height: 650px;
+    background-size: cover;
+}
+
+.grillaFotosProyecto{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-around;
+    align-items:center;
+    background-color: black;
+    padding: 20px;
+}
+
+.textoIntroductorioProy{
+    display: flex;
+    background-color: black;
+    height: auto;
+    align-items:flex-start;
+    padding-left: 20px;
+    flex-direction: column;
+    padding-bottom: 20px;
+}
+
+.textoIntroductorio{
+    font-family: 'Outfit', sans-serif;
+    color: lightgray;
+    font-weight: 400;
+    font-size: 21px;
+    padding-top: 15px;
+}
+
+.imProy{
+    height: 300px;
+    width: 455px;
+}
+
+/* FIN / Body Fotos */
+
+/* INICIO / Boby Libros */
+
+#contenedorImgSup6{
+    background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(../imagenes/foto_marce/blanco_y_negro/9.jpg);
+    height: 650px;
+    background-position: -10px -360px;
+    background-size: cover;
+}
+#titulo-bajo-imagen{
+    font-family: 'Inter Tight', sans-serif;
+    color: white;
+    padding-top: 20px;
+    font-size: 35px;
+}
+.libros{
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+}
+.libro{
+    display: flex;
+    padding: 30px;
+    margin: 10px;
+}
+.fotoLibro{
+    width: 50%;
+    margin-left: 10px;
+    height: 50%;
+}
+.contTexto{
+    background-color: rgb(22, 22, 22);
+    margin-right: 30px;
+}
+.tituloLibro{
+    width: 60%;
+    font-size: 40px;
+    color: white;
+    padding-left: 30px;
+    padding-bottom: 20px;
+    margin-top: 20px;
+    font-family: 'Inter Tight', sans-serif;
+}
+.descripcionLibro{
+    color: white;
+    font-size: 21px;
+    padding-left: 30px;
+    padding-right: 70px;
+    font-family: 'Outfit', sans-serif;
+}
+
+/* FIN / Boby Libros */
+
+/* INICIO / Body blog */
+
+#contenedorImgSup7{
+    background-image: url(../imagenes/foto_marce/blanco_y_negro/foto_marce3.jpg);
+    height: 650px;
+    background-position: -10px -360px;
+}
+
+/* FIN / Body Blog */
+
+.foto_descripcion{
+    display: flex;   
+    background-color: black;
+    padding: 40px;
+}
+.fotoBlog{
+    height: 400px;
+}
+.descrpcionBlog{
+    font-family: 'Outfit', sans-serif;
+    color: white;
+    padding: 20px;
+    font-size: 21px;
+}
+.tituloPremios{
+    background-color: black;
+}
+.tituloPremio{
+    font-family: 'Inter Tight', sans-serif;
+    font-style: italic;
+    color: rgb(202, 202, 202);  
+    font-size: 50px;
+    margin-left: 40px;
+}
+.fotosPremio{
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+
+}
+.fotoPremios{
+    height: 400px;
+    width: 400px;
+    margin-left: 40px;
+    margin-top: 20px;
+}
+.premioAndDescripcion{
+    display: flex;
+}
+.descripPrem{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    margin-top: 20px;
+}
+/* FIN / Body Blog */
+
+/* INICIO / Body Contacto */
+
+#contenedorImgSup8{
+    background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(../imagenes/foto_marce/blanco_y_negro/8.jpg);
+    height: 650px;
+    background-position: -10px;
+    background-size: cover;
+}
+.contactoFormulario{
+    display: flex;
+    background-color: black;
+    align-items: center;
+}
+.contacto2{
+    display: flex;
+    height: 650px;
+    width: 50%;
+    flex-direction: column;
+    padding-right: 50px;
+    padding-left: 200px;
+}.tituloContacto{
+    color: white;
+    font-family: 'Inter Tight', sans-serif;
+    font-size: 40px;
+    padding-top: 60px;
+}
+.descripcion{
+    color: white;
+    font-family: 'Outfit', sans-serif;
+    font-size: 21px;
+    margin-top: 20px;
+}
+.formulario{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 200px;
+}
+.f1{
+    background-color: black;
+    color: white;
+    border-width: 2px;
+    width: 500px;
+    height: 50px;
+    margin-bottom: 30px;
+}
+#f2{
+    height: 200px;
+}
+.botonf{
+    width: 100px;
+    height: 40px;
+    background-color: black;
+    color: white;
+}
+
+/* FIN / Body Contacto */
+
+
+/* Mobile Proyectos */
+
+@media (max-width: 768px){
+
+}
+
+/* Mobile Proyectos */
