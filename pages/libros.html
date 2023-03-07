@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>LIBROS - Marcelo Rico</title>
         <link rel="icono" href="./Imagenes/logoSup.jpg"> <!--No me pone el icono arriba en la pesatana-->
-        <link rel="stylesheet" href="../styles/style.css"/>
+        <link rel="stylesheet" href="../estilos/css/styles2.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,7 +20,7 @@
         <nav>
             <ul class="listaLinks">
                 <li><a class="navHead" href="../pages/libros.html" >LIBROS</a></li>
-                <li><a class="navHead" href="../pages/proyecto2.html">PROYECTOS</a></li>
+                <li><a class="navHead" href="../pages/proyectos.html">PROYECTOS</a></li>
                 <li><a class="navHead" href="../pages/blog.html">BLOG</a></li>
                 <li><a class="navHead" href="../pages/contacto.html">CONTACTO</a></li>
             </ul>
@@ -47,31 +47,31 @@
     <!-- INICIO / 3 filas con las caratulas y la descripccion-->
 
     <section class="libros">
-        <div class="libro">
-            <img class="fotoLibro" src="../imagenes/foto_marce/trenes/pagina_de_trenes/12.jpg" alt="ImgProy"/>
-            <div class="contTexto">
+        
+            <img class="fotoLibro" id="fotolibro1" src="../imagenes/foto_marce/trenes/pagina_de_trenes/12.jpg" alt="ImgProy"/>
+            <div class="contTexto" id="textoLibro1">
                 <h2 class="tituloLibro">Fantasmas entre vías y trenes</h2>
                 <p class="descripcionLibro">Lorem ipsum, dolor sit amet consectetur adipisicing 
                     elit. Sequi blanditiis porro quam nihil, ratione quisquam molestiae 
                     ipsum, error reprehenderit excepturi cumque veniam dolores tempora. Aliquam 
                     autem animi excepturi culpa placeat?</p>
             </div>
-        </div>
+        
 
-        <div class="libro">
-            <img class="fotoLibro" src="../imagenes/im_libro.jpg" alt="ImgProy"/>
-            <div class="contTexto">
+        
+            <img class="fotoLibro" id="fotolibro2" src="../imagenes/im_libro.jpg" alt="ImgProy"/>
+            <div class="contTexto" id="textoLibro2">
                 <h2 class="tituloLibro">Libro2</h2>
                 <p class="descripcionLibro">Lorem ipsum, dolor sit amet consectetur adipisicing 
                     elit. Sequi blanditiis porro quam nihil, ratione quisquam molestiae 
                     ipsum, error reprehenderit excepturi cumque veniam dolores tempora. Aliquam 
                     autem animi excepturi culpa placeat?</p>
             </div>
-        </div>
+        
 
-        <div class="libro">
-            <img class="fotoLibro" src="../imagenes/im_libro.jpg" alt="ImgProy"/>
-            <div class="contTexto">
+        
+            <img class="fotoLibro" id="fotolibro3" src="../imagenes/im_libro.jpg" alt="ImgProy"/>
+            <div class="contTexto" id="textoLibro3">
                 <h2 class="tituloLibro">Libro3</h2>
                 <p class="descripcionLibro">Lorem ipsum, dolor sit amet consectetur adipisicing 
                     elit. Sequi blanditiis porro quam nihil, ratione quisquam molestiae 
@@ -120,7 +120,7 @@
             <nav>
                 <ul class="listaLinks" id="linksFoot">
                     <li><a class="navFootItem" href="../pages/libros.html" >LIBROS</a></li>
-                    <li><a class="navFootItem" href="../pages/proyecto2.html">PROYECTOS</a></li>
+                    <li><a class="navFootItem" href="../pages/proyectos.html">PROYECTOS</a></li>
                     <li><a class="navFootItem" href="../pages/blog.html">BLOG</a></li>
                     <li><a class="navFootItem" href="../pages/contacto.html">CONTACTO</a></li>
                 </ul>
@@ -129,11 +129,13 @@
 
         <!--Contacto-->
 
-        <div class="contenedoresFoot">
-            <h2 class="titulosFoot">Contacto</h2>
+        <div class="contenedoresFoot" id="eliminarEnMobile">
+            <div class="titulosFooter">
+                <h2 class="titulosFoot">Contacto</h2>
+            </div>
             <div>
-                <p class="contacto">marcelorico@gmail.com</p>
-                <p class="contacto">Telefono: ********</p>
+                <p class="letras">E-mail: marcelorico@gmail.com</p>
+                <p class="letras">Telefono: ********</p>
             </div>
         </div>
     </footer>
