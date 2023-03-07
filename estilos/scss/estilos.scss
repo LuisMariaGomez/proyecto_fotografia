@@ -4,6 +4,20 @@
 @import "extends";
 @import "maps";
 
+
+
+@keyframes aparecer {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+
+
+
 *{
     padding: 0px;
     margin: 0px;
@@ -26,6 +40,11 @@ img{
 }
 
 header{
+
+    animation-duration: 2s;
+    animation-name: aparecer;
+    animation-iteration-count: 1;
+
     @include sizes_wh(100%,auto);
     display: grid;
     grid-template-areas:
@@ -34,8 +53,14 @@ header{
     z-index: 1;
     align-items: map-get($mapa, centro);
     nav{
+        animation-duration: 1s;
+        animation-name: aparecer;
+        animation-iteration-count: 1;
+
         grid-area: nav;
         justify-self: end;
+        padding-right: 100px;
+        padding-top: 20px;
         ul{
             display: flex;
             list-style: map-get($mapa, nada);
@@ -47,11 +72,13 @@ header{
                 a{
                     color: $gris_claro;
                     text-decoration: map-get($mapa, nada);
+                    padding-right: 50px;
+                    font-size: 25px;
                 }
                 &:hover{
                     transition: 1s;
                     color: $blanco;
-                    font-size: 25px;
+                    font-size: 35px;
                     font-weight: bold;
                 }
             }

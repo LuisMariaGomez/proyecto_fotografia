@@ -17,6 +17,14 @@
 }
 
 /* .descripcion  .imgProy  .textos_pg_proy .seccion3 .textosSecc2 .boton ##linkFoot .contenedoresFoot .contenedorSponsors*/
+@keyframes aparecer {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 * {
   padding: 0px;
   margin: 0px;
@@ -40,6 +48,9 @@ img {
 }
 
 header {
+  animation-duration: 2s;
+  animation-name: aparecer;
+  animation-iteration-count: 1;
   width: 100%;
   height: auto;
   display: grid;
@@ -49,8 +60,13 @@ header {
   align-items: center;
 }
 header nav {
+  animation-duration: 1s;
+  animation-name: aparecer;
+  animation-iteration-count: 1;
   grid-area: nav;
   justify-self: end;
+  padding-right: 100px;
+  padding-top: 20px;
 }
 header nav ul {
   display: flex;
@@ -65,11 +81,13 @@ header nav ul li {
 header nav ul li a {
   color: lightgray;
   text-decoration: none;
+  padding-right: 50px;
+  font-size: 25px;
 }
 header nav ul li:hover {
   transition: 1s;
   color: white;
-  font-size: 25px;
+  font-size: 35px;
   font-weight: bold;
 }
 
