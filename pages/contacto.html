@@ -21,22 +21,28 @@
     </head>
 <body>
 
-    <header class="head">       
-        <a href="../index.html"><img class='logo' src="../Imagenes/logo.png" alt="logoMarceloRico"/></a>
-        <nav>
+    <header class="header">
+        <div class="contLogo">
+            <a href="../index.html"><img class='logo' src="../Imagenes/logo.png" alt="logoMarceloRico"/></a>
+        </div>
+        <nav class="listaLinksHead">
             <ul class="listaLinks">
-                <li><a class="navs" href="../pages/libros.html" >LIBROS</a></li>
-                <li><a class="navs" href="../pages/proyectos.html">PROYECTOS</a></li>
-                <li><a class="navs" href="../pages/blog.html">BLOG</a></li>
-                <li><a class="navs" href="../pages/contacto.html">CONTACTO</a></li>
+                <li id="link1"><a class="navs" href="./libros.html" >LIBROS</a></li>
+                <li id="link2"><a class="navs" href="./proyectos.html">PROYECTOS</a></li>
+                <li id="link3"><a class="navs" href="./blog.html">BLOG</a></li>
+                <li id="link4"><a class="navs" href="./contacto.html">CONTACTO</a></li>
             </ul>
         </nav>
+        <div class="descripcion">
+            <h2 class="tituloMobile animate__animated animate__fadeInDown">CONTACTO</h2>
+            <h3 class="descripcionMobile animate__animated animate__fadeInDown">Lejos, pero muy cerca</h3>
+        </div>
     </header>
 
     <main>
         <!-- INICIO / Imagenes que ocupan toda la pantalla y se mimetizan con el header-->
 
-        <div class="contenedorImgSup" id="contenedorImgSup8">            
+        <div class="contenedorImgSup eliminarEnMobile" id="contenedorImgSup8">            
             <h2 class="letrasImgSup animate__animated animate__fadeInDown">CONTACTO</h2>
             <h3 class="subLetrasImgSup animate__animated animate__fadeInDown">Lejos, pero muy cerca</h3>
         </div>
@@ -47,7 +53,7 @@
 
         <div class="contactoFormulario">
             <div class="contacto2">
-                <p class="tituloContacto">CONTACTAME</p>
+                <p class="tituloContacto eliminarEnMobile">CONTACTAME</p>
                 <p class="descripcionBlog">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis 
                     incidunt sed et repellendus perferendis optio eveniet enim laborum. Enim adipisci esse 
                     officia, suscipit dolorum harum molestias distinctio ipsa atque temporibus.</p>
@@ -61,7 +67,7 @@
                 <textarea class="f1" id="f2" cols="" rows="" placeholder="Deja tu mensaje"></textarea>
                 <div>
                     <input class="botonf" type="reset" value="Borrar todo"/>
-                    <input class="botonf" type="submit" value="Enviar"/>
+                    <input class="botonf" id="botonEnviar" type="submit" value="Enviar"/>
                 </div>
             </form>
         </div>
@@ -104,11 +110,11 @@
                         <h2 class="titulosFoot">Categorias<h1>
                     </div>
                     <nav id="listaFoot">
-                        <ul class="listaLinks">
-                            <li class="link"><a class="navsfoot" href="../pages/libros.html" >LIBROS</a></li>
-                            <li class="link"><a class="navsfoot" href="../pages/proyectos.html">PROYECTOS</a></li>
-                            <li class="link"><a class="navsfoot" href="../pages/blog.html">BLOG</a></li>
-                            <li class="link"><a class="navsfoot" href="../pages/contacto.html">CONTACTO</a></li>
+                        <ul class="listaLinksfoot1">
+                            <li class="linkfoot1"><a class="navsfoot" href="../pages/libros.html" >LIBROS</a></li>
+                            <li class="linkfoot1"><a class="navsfoot" href="../pages/proyectos.html">PROYECTOS</a></li>
+                            <li class="linkfoot1"><a class="navsfoot" href="../pages/blog.html">BLOG</a></li>
+                            <li class="linkfoot1"><a class="navsfoot" href="../pages/contacto.html">CONTACTO</a></li>
                         </ul>
                     </nav>
                 </div>

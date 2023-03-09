@@ -75,12 +75,12 @@ header{
                     text-decoration: map-get($mapa, nada);
                     padding-right: 50px;
                     font-size: 30px;
-                }
-                &:hover{
-                    transition: 1s;
-                    color: $blanco;
-                    font-size: 35px;
-                    font-weight: bold;
+                    &:hover{
+                        transition: 1s;
+                        color: $blanco;
+                        font-size: 35px;
+                        font-weight: bold;
+                    }
                 }
             }
         }
@@ -133,7 +133,7 @@ header{
     padding-top: 20px;
 }
 
-.listaLinksoot{
+.listaLinksfoot1{
     display: flex;
     color: $gris;
     align-items: map-get($mapa, centro);
@@ -148,6 +148,7 @@ header{
         }
     }
 }
+
 
 .navFootItem{
     text-decoration: map-get($mapa, nada);
@@ -353,6 +354,7 @@ header{
 .tituloSeccion{
     grid-area: logoIgSeccion5;
     font-size: 50px;
+    color: white;
 }
 .imagenesSecc5{
     grid-area: fotosIgSeccion5;
@@ -812,7 +814,7 @@ header{
     .navs{
         &:hover{
             transition: 0s;
-            font-size: 25px;
+            font-size: 30px;
             font-weight: 200;
         }
     }
@@ -1026,16 +1028,38 @@ header{
         justify-content: center;
         align-items: center;
     }
-}
+
+    header{
+        background-color: $negro;
+    }
+
 /* Proyectos Mobile */
 
-/* INICIO - Blog Mobile */
+/* INICIO - Contacto Mobile */
 
+.contactoFormulario{
+    display: grid;
+    grid-template-areas: 
+    "formilarioTexto"
+    "formulario";
+}
+.contacto2{
+    grid-area: formilarioTexto;
+    height: 250px;
+    padding-left: 100px;
+    padding-right: 100px;
+    align-items: center;
+}
+.formulario{
+    grid-area: formulario;
+    margin-right: 0px;
+    padding-left: 100px;
+    padding-bottom: 50px;
+}
 
+/* FIN - Contacto Mobile */
 
-/* INICIO - Blog Mobile */
-
-
+}
 
 
 

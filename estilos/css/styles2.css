@@ -84,7 +84,7 @@ header nav ul li a {
   padding-right: 50px;
   font-size: 30px;
 }
-header nav ul li:hover {
+header nav ul li a:hover {
   transition: 1s;
   color: white;
   font-size: 35px;
@@ -134,17 +134,17 @@ header nav ul li:hover {
   padding-top: 20px;
 }
 
-.listaLinksoot {
+.listaLinksfoot1 {
   display: flex;
   color: gray;
   align-items: center;
   list-style: none;
 }
-.listaLinksoot li {
+.listaLinksfoot1 li {
   font-family: "Outfit", sans-serif;
   padding-right: 30px;
 }
-.listaLinksoot li a {
+.listaLinksfoot1 li a {
   color: lightgray;
   text-decoration: none;
   font-size: 25px;
@@ -348,6 +348,7 @@ header nav ul li:hover {
 .tituloSeccion {
   grid-area: logoIgSeccion5;
   font-size: 50px;
+  color: white;
 }
 
 .imagenesSecc5 {
@@ -821,7 +822,7 @@ header nav ul li:hover {
   }
   .navs:hover {
     transition: 0s;
-    font-size: 25px;
+    font-size: 30px;
     font-weight: 200;
   }
   .descripcion {
@@ -995,9 +996,29 @@ header nav ul li:hover {
     justify-content: center;
     align-items: center;
   }
+  header {
+    background-color: black;
+  }
+  /* Proyectos Mobile */
+  /* INICIO - Contacto Mobile */
+  .contactoFormulario {
+    display: grid;
+    grid-template-areas: "formilarioTexto" "formulario";
+  }
+  .contacto2 {
+    grid-area: formilarioTexto;
+    height: 250px;
+    padding-left: 100px;
+    padding-right: 100px;
+    align-items: center;
+  }
+  .formulario {
+    grid-area: formulario;
+    margin-right: 0px;
+    padding-left: 100px;
+    padding-bottom: 50px;
+  }
+  /* FIN - Contacto Mobile */
 }
-/* Proyectos Mobile */
-/* INICIO - Blog Mobile */
-/* INICIO - Blog Mobile */
 
 /*# sourceMappingURL=styles2.css.map */
