@@ -78,7 +78,7 @@
 <!-- FIN - Seccion 1 -->
 
 <!-- INICIO - Seccion 2 -->
-        <section class="seccion2">
+        <section class="seccion2" id="seccion2Mobile">
                 <div id="texto1" class="textosSecc2">
                     <h2 id="mitadPagTitulo">UNA COLECCIÓN DE LAS MEJORES GALERIAS</h2>
                     <h3 id="mitadPagSubTitulo">Un viaje a travez de los mejores momentos captados en cámara</h4>
@@ -116,6 +116,7 @@
 
 <!--  INICIO - Seccion 4 -->
 <section class="seccion4">
+
 
     <div class="seccionProy">
         <div id="proy1" class="imgProy">
@@ -207,70 +208,83 @@
             <a href="https://www.instagram.com/p/CJ8aU7kLC7q/"><img class="imgIG" src="./imagenes/seccion_ig/8.png" alt="fotoInstagram8"/></a>
         </div>
     </section>
-    <div class="logoMobile">
-        <div>
-            <a href="https://www.instagram.com/marcelorico13/" target="_blank"><img class='logo' src="./imagenes/logo_ig_mobile.png" alt="logoIgMobile"/></a>
-        </div>
-        <div>
-            <a href="https://www.facebook.com/marceloriko" target="_blank"><img class='logo' src="./imagenes/logo_fb_mobile.png" alt="logoFbMobile"/></a>
-        </div>
+
+    <div class="logoMobile" id="logoIgMobile">
+        <a href="https://www.instagram.com/marcelorico13/" target="_blank"><img class='logo' src="./imagenes/logo_ig_mobile.png" alt="logoIgMobile"/></a>
     </div>
+    
+    <div class="logoMobile" id="logoFbMobile">
+        <a href="https://www.facebook.com/marceloriko" target="_blank"><img class='logo' src="./imagenes/logo_fb_mobile.png" alt="logoFbMobile"/></a>
+    </div>
+
 </div>
-<footer class="foot" id="foot">
+<footer>
+    <div class="foot eliminarEnMobile" id="foot">
+        <!--Redes-->
 
-    <!--Redes-->
+        <div class="contenedoresFoot" id="eliminarEnMobile">
 
-    <div class="contenedoresFoot" id="eliminarEnMobile">
+            <div class="titulosFooter">
+                <h2 class="titulosFoot">Seguime en mis redes</h2>
+            </div>
 
-        <div class="titulosFooter">
-            <h2 class="titulosFoot">Seguime en mis redes</h2>
+            <div class="contenedoresRedes">
+                <a href="https://www.facebook.com/marceloriko"><img class="logoRedes" src="./imagenes/imagenes_redes/facebook.png" alt="imgFacebook"/></a>
+                <a href="https://www.instagram.com/marcelorico13/"><img class="logoRedes" src="./imagenes/imagenes_redes/instagram.png" alt="imgInstagram"/></a>
+            </div>
+
         </div>
 
-        <div class="contenedoresRedes">
-            <a href="https://www.facebook.com/marceloriko"><img class="logoRedes" src="./imagenes/imagenes_redes/facebook.png" alt="imgFacebook"/></a>
-            <a href="https://www.instagram.com/marcelorico13/"><img class="logoRedes" src="./imagenes/imagenes_redes/instagram.png" alt="imgInstagram"/></a>
+        <!--Imagenes esponsors-->
+
+        <div class="contenedoresFoot" id="eliminarEnMobile">
+            <div class="titulosFooter">
+                <h2 class="titulosFoot">Esponsors</h2>
+            </div>
+            <div class="contenedorSponsors">
+                <a href="https://www.epson.com.au"><img class="logoSponsors" src="./imagenes/imagenes_redes/epson1.png" alt="epsonImg"/></a>
+                <a href="https://www.canon.es/apps/image-canon/"><img class="logoSponsors" src="./imagenes/imagenes_redes/canon.png" alt="canonImg"/></a>
+            </div>
         </div>
 
+        <!-- Categorias-->
+
+        <div class="contenedoresFoot" id="linksFoot">
+            <div class="titulosFooter"  id="eliminarEnMobile">
+                <h2 class="titulosFoot">Categorias<h1>
+            </div>
+            <nav id="listaFoot">
+                <ul class="listaLinkfoot">
+                    <li class="link"><a class="navsfoot" href="./pages/libros.html" >LIBROS</a></li>
+                    <li class="link"><a class="navsfoot" href="./pages/proyectos.html">PROYECTOS</a></li>
+                    <li class="link"><a class="navsfoot" href="./pages/blog.html">BLOG</a></li>
+                    <li class="link"><a class="navsfoot" href="./pages/contacto.html">CONTACTO</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <!--Contacto-->
+
+        <div class="contenedoresFoot" id="eliminarEnMobile">
+            <div class="titulosFooter">
+                <h2 class="titulosFoot">Contacto</h2>
+            </div>
+            <div>
+                <p class="letras">E-mail: marcelorico@gmail.com</p>
+                <p class="letras">Telefono: ********</p>
+            </div>
+        </div>
     </div>
 
-    <!--Imagenes esponsors-->
-
-    <div class="contenedoresFoot" id="eliminarEnMobile">
-        <div class="titulosFooter">
-            <h2 class="titulosFoot">Esponsors</h2>
-        </div>
-        <div class="contenedorSponsors">
-            <a href="https://www.epson.com.au"><img class="logoSponsors" src="./imagenes/imagenes_redes/epson1.png" alt="epsonImg"/></a>
-            <a href="https://www.canon.es/apps/image-canon/"><img class="logoSponsors" src="./imagenes/imagenes_redes/canon.png" alt="canonImg"/></a>
-        </div>
-    </div>
-
-    <!-- Categorias-->
-
-    <div class="contenedoresFoot" id="linksFoot">
-        <div class="titulosFooter"  id="eliminarEnMobile">
-            <h2 class="titulosFoot">Categorias<h1>
-        </div>
+    <div class="footerMobile">
         <nav>
-            <ul class="listaLinks">
-                <li><a class="navs" href="./pages/libros.html" >LIBROS</a></li>
-                <li><a class="navs" href="./pages/proyectos.html">PROYECTOS</a></li>
-                <li><a class="navs" href="./pages/blog.html">BLOG</a></li>
-                <li><a class="navs" href="./pages/contacto.html">CONTACTO</a></li>
+            <ul class="listaLinksfoot">
+                <li class="linkfoot"><a class="navsfoot" href="./pages/libros.html" >LIBROS</a></li>
+                <li class="linkfoot"><a class="navsfoot" href="./pages/proyectos.html">PROYECTOS</a></li>
+                <li class="linkfoot"><a class="navsfoot" href="./pages/blog.html">BLOG</a></li>
+                <li class="linkfoot"><a class="navsfoot" href="./pages/contacto.html">CONTACTO</a></li>
             </ul>
         </nav>
-    </div>
-
-    <!--Contacto-->
-
-    <div class="contenedoresFoot" id="eliminarEnMobile">
-        <div class="titulosFooter">
-            <h2 class="titulosFoot">Contacto</h2>
-        </div>
-        <div>
-            <p class="letras">E-mail: marcelorico@gmail.com</p>
-            <p class="letras">Telefono: ********</p>
-        </div>
     </div>
 </footer>
 </div> 

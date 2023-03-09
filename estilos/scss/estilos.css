@@ -60,27 +60,34 @@ header {
   align-items: center;
 }
 header nav {
+  animation-duration: 1s;
+  animation-name: aparecer;
+  animation-iteration-count: 1;
   grid-area: nav;
   justify-self: end;
+  padding-right: 100px;
+  padding-top: 20px;
 }
 header nav ul {
   display: flex;
   list-style: none;
+  padding-left: 40px;
 }
 header nav ul li {
   font-weight: 200;
-  padding-right: 30px;
   font-family: "Outfit", sans-serif;
   font-size: 21px;
 }
 header nav ul li a {
   color: lightgray;
   text-decoration: none;
+  padding-right: 50px;
+  font-size: 30px;
 }
 header nav ul li:hover {
   transition: 1s;
   color: white;
-  font-size: 25px;
+  font-size: 35px;
   font-weight: bold;
 }
 
@@ -102,7 +109,7 @@ header nav ul li:hover {
 }
 
 .logoRedes {
-  height: 50px;
+  height: 70px;
   margin-left: 10px;
   margin-right: 10px;
 }
@@ -113,7 +120,8 @@ header nav ul li:hover {
 }
 
 .logoSponsors {
-  width: 100px;
+  width: 150px;
+  padding-right: 10px;
 }
 
 .foot {
@@ -122,19 +130,24 @@ header nav ul li:hover {
   background-color: rgb(21, 21, 21);
 }
 
-.listaLinks {
+#listaFoot {
+  padding-top: 20px;
+}
+
+.listaLinksoot {
   display: flex;
   color: gray;
   align-items: center;
   list-style: none;
 }
-.listaLinks li {
+.listaLinksoot li {
   font-family: "Outfit", sans-serif;
   padding-right: 30px;
 }
-.listaLinks li a {
+.listaLinksoot li a {
   color: lightgray;
   text-decoration: none;
+  font-size: 25px;
 }
 
 .navFootItem {
@@ -146,10 +159,15 @@ header nav ul li:hover {
   margin-top: 10px;
 }
 
+.footerMobile {
+  display: none;
+}
+
 /* FIN - Footer */
 /* INICIO - Letras y Botones*/
 .letras {
   color: white;
+  font-size: 20px;
 }
 
 .h2, .titulos_pg_proy, .letrasImgSup, .descripcionLibro, .tituloLibro, #titulo-bajo-imagen, .titulosTercerSeccion, .textosSecc3, #mitadPagTitulo {
@@ -318,7 +336,7 @@ header nav ul li:hover {
 /* INICIO - Seccion 5 */
 .seccion5 {
   display: grid;
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas: "logoIgSeccion5" "fotosIgSeccion5";
   background-color: black;
 }
 
@@ -328,10 +346,12 @@ header nav ul li:hover {
 }
 
 .tituloSeccion {
+  grid-area: logoIgSeccion5;
   font-size: 50px;
 }
 
 .imagenesSecc5 {
+  grid-area: fotosIgSeccion5;
   display: grid;
   grid-template-columns: repeat(10, 1fr);
   -moz-column-gap: 30px;
@@ -789,14 +809,21 @@ header nav ul li:hover {
     background-color: black;
   }
   .listaLinksHead {
+    padding-right: 0px;
+    padding-top: 0px;
     margin-top: 20px;
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
   }
-  .navs {
-    margin-left: 30px;
-    margin-right: 30px;
+  .listaLinks {
+    display: flex;
+    justify-content: space-between;
+  }
+  .navs:hover {
+    transition: 0s;
+    font-size: 25px;
+    font-weight: 200;
   }
   .descripcion {
     width: 100%;
@@ -819,33 +846,53 @@ header nav ul li:hover {
     margin: 0px;
     padding-bottom: 10px;
   }
+  .seccion5 {
+    display: grid;
+    grid-template-areas: "instagram" "facebook";
+  }
+  #logoIgMobile {
+    grid-area: instagram;
+  }
+  #logoFbMobile {
+    grid-area: facebook;
+  }
   /* FIN - Header Mobile */
   /* Footer Mobile */
-  #foot {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 60px;
-    padding-top: 20px;
+  titulosFooter {
+    display: none;
   }
-  .linksFoot {
+  .listaLinksfoot {
     display: flex;
+    list-style: none;
+    justify-content: space-between;
   }
-  .imgProy {
-    grid-column: 1/10;
-    background-size: cover;
+  .listaLinksfoot li a {
+    text-decoration: none;
+    font-size: 30px;
+  }
+  .footerMobile {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: black;
+    height: 50px;
+  }
+  .footerMobile nav ul {
+    list-style: none;
+    padding-left: 30px;
+  }
+  .footerMobile nav ul li {
+    text-decoration: none;
+  }
+  .footerMobile nav ul li a {
+    margin-right: 50px;
+    color: lightgray;
   }
   /* Footer Mobile */
   /* Index Mobile */
-  .seccion2 {
-    display: grid;
-    grid-template-areas: "texto1 texto1 texto1" "texto2 texto2 texto2" "texto3 texto3 texto3";
-    grid-template-rows: repeat(3, 1fr);
-    grid-template-columns: repeat(3, 1fr);
+  #seccion2Mobile {
+    display: flex;
+    flex-direction: column;
     align-items: center;
     background-color: black;
   }
@@ -857,26 +904,40 @@ header nav ul li:hover {
     justify-content: center;
   }
   #texto1 {
-    grid-area: texto1;
-    background-image: url(../imagenes/foto_marce/agua/3.jpg);
+    background-image: url(../../imagenes/foto_marce/agua/3.jpg);
     background-size: cover;
   }
   #texto2 {
-    grid-area: texto2;
-    background-image: url(../imagenes/foto_marce/agua/4.jpg);
+    background-image: url(../../imagenes/foto_marce/agua/4.jpg);
     background-size: cover;
     background-position-y: -100px;
   }
   #texto3 {
-    grid-area: texto3;
-    background-image: url(../imagenes/foto_marce/blanco_y_negro/2.jpg);
+    background-image: url(../../imagenes/foto_marce/blanco_y_negro/2.jpg);
     background-size: cover;
     background-position-y: -100px;
+  }
+  #imagenMitad1 {
+    display: none;
+  }
+  #imagenMitad2 {
+    display: none;
+  }
+  .imgProy {
+    grid-column: 1/10;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   /* Index Mobile */
   /* Proyectos Mobile */
   #contenedorImgSup4 {
     display: none;
+  }
+  .descripcion {
+    color: white;
   }
   .seccionProyectos {
     display: grid;
@@ -906,27 +967,27 @@ header nav ul li:hover {
   }
   #imagen1 {
     grid-area: imagen1;
-    background-image: url(../imagenes/foto_marce/trenes/1.jpg);
+    background-image: url(../../imagenes/foto_marce/trenes/1.jpg);
   }
   #imagen2 {
     grid-area: imagen2;
-    background-image: url(../imagenes/foto_marce/agua/5.jpg);
+    background-image: url(../../imagenes/foto_marce/agua/5.jpg);
   }
   #imagen3 {
     grid-area: imagen3;
-    background-image: url(../imagenes/foto_marce/blanco_y_negro/7.jpg);
+    background-image: url(../../imagenes/foto_marce/blanco_y_negro/7.jpg);
   }
   #imagen4 {
     grid-area: imagen4;
-    background-image: url(../imagenes/foto_marce/desnudos/2.jpg);
+    background-image: url(../../imagenes/foto_marce/desnudos/2.jpg);
   }
   #imagen5 {
     grid-area: imagen5;
-    background-image: url(../imagenes/foto_marce/comidas/1.jpg);
+    background-image: url(../../imagenes/foto_marce/comidas/1.jpg);
   }
   #imagen6 {
     grid-area: imagen6;
-    background-image: url(../imagenes/foto_marce/Institucional/1.jpg);
+    background-image: url(../../imagenes/foto_marce/Institucional/1.jpg);
   }
   .textos_pg_proy {
     width: auto;
@@ -936,4 +997,6 @@ header nav ul li:hover {
     align-items: center;
   }
 }
-/* Proyectos Mobile *//*# sourceMappingURL=estilos.css.map */
+/* Proyectos Mobile */
+/* INICIO - Blog Mobile */
+/* INICIO - Blog Mobile *//*# sourceMappingURL=estilos.css.map */
