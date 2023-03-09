@@ -21,22 +21,28 @@
     </head>
 <body>
 
-    <header class="head">       
-        <a href="../index.html"><img class='logo' src="../Imagenes/logo.png" alt="logoMarceloRico"/></a>
-        <nav>
+    <header class="header">
+        <div class="contLogo">
+            <a href="../index.html"><img class='logo' src="../Imagenes/logo.png" alt="logoMarceloRico"/></a>
+        </div>
+        <nav class="listaLinksHead">
             <ul class="listaLinks">
-                <li><a class="navs" id="navs" href="../pages/libros.html" >LIBROS</a></li>
-                <li><a class="navs" id="navs" href="../pages/proyectos.html">PROYECTOS</a></li>
-                <li><a class="navs" id="navs" href="../pages/blog.html">BLOG</a></li>
-                <li><a class="navs" id="navs" href="../pages/contacto.html">CONTACTO</a></li>
+                <li id="link1"><a class="navs" href="./libros.html" >LIBROS</a></li>
+                <li id="link2"><a class="navs" href="./proyectos.html">PROYECTOS</a></li>
+                <li id="link3"><a class="navs" href="./blog.html">BLOG</a></li>
+                <li id="link4"><a class="navs" href="./contacto.html">CONTACTO</a></li>
             </ul>
         </nav>
+        <div class="descripcion">
+            <h2 class="tituloMobile animate__animated animate__fadeInDown">LIBROS</h2>
+            <h3 class="descripcionMobile animate__animated animate__fadeInDown">Todo en tus manos</h3>
+        </div>
     </header>
     </main>
 
     <!-- INICIO / Imagenes que ocupan toda la pantalla y se mimetizan con el header-->
 
-    <div class="contenedorImgSup" id="contenedorImgSup6">
+    <div class="contenedorImgSup eliminarEnMobile" id="contenedorImgSup6">
         <h2 class="letrasImgSup animate__animated animate__fadeInDown">LIBROS</h2>
         <h3 class="subLetrasImgSup animate__animated animate__fadeInDown">Todo en tus manos</h3>
     </div>
@@ -44,7 +50,7 @@
     <!-- FIN / Imagenes que ocupan toda la pantalla y se mimetizan con el header-->
 
     <div class="textoIntroductorioProy">
-        <h2 id="titulo-bajo-imagen">COLECCIÓN DE LIBROS DE EDICION LIMITADA</h2>
+        <h2 id="titulo-bajo-imagen">MI COLECCIÓN DE LIBROS DE EDICION LIMITADA</h2>
         <p class="textoIntroductorio">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem 
             praesentium excepturi nobis quisquam deleniti omnis iste eligendi earum placeat illum suscipit 
             exercitationem harum reprehenderit, labore ex sunt dignissimos molestias aperiam!</p>
@@ -53,10 +59,9 @@
     <!-- INICIO / 3 filas con las caratulas y la descripccion-->
 
     <section class="libros">
-        
-            <img class="fotoLibro" id="fotolibro1" src="../imagenes/foto_marce/trenes/pagina_de_trenes/12.jpg" alt="ImgProy"/>
+            <div class="fotoLibro" id="fotolibro1"></div>
             <div class="contTexto" id="textoLibro1">
-                <h2 class="tituloLibro">Fantasmas entre vías y trenes</h2>
+                <h2 class="tituloLibro">Fantasmas entre vías y durmientes</h2>
                 <p class="descripcionLibro">Lorem ipsum, dolor sit amet consectetur adipisicing 
                     elit. Sequi blanditiis porro quam nihil, ratione quisquam molestiae 
                     ipsum, error reprehenderit excepturi cumque veniam dolores tempora. Aliquam 
@@ -64,8 +69,7 @@
             </div>
         
 
-        
-            <img class="fotoLibro" id="fotolibro2" src="../imagenes/im_libro.jpg" alt="ImgProy"/>
+            <div class="fotoLibro" id="fotolibro2"></div>
             <div class="contTexto" id="textoLibro2">
                 <h2 class="tituloLibro">Libro2</h2>
                 <p class="descripcionLibro">Lorem ipsum, dolor sit amet consectetur adipisicing 
@@ -75,8 +79,7 @@
             </div>
         
 
-        
-            <img class="fotoLibro" id="fotolibro3" src="../imagenes/im_libro.jpg" alt="ImgProy"/>
+            <div class="fotoLibro" id="fotolibro3"></div>
             <div class="contTexto" id="textoLibro3">
                 <h2 class="tituloLibro">Libro3</h2>
                 <p class="descripcionLibro">Lorem ipsum, dolor sit amet consectetur adipisicing 

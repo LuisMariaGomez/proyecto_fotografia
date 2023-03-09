@@ -487,26 +487,27 @@ header{
     display: map-get($mapa, grilla);
     background-color: $negro;
     grid-template-areas:
-    " imgLibro1 texto1 texto1 "
-    " imgLibro2 texto2 texto2 "
-    " imgLibro3 texto3 texto3 ";
+    "imgLibro1 texto1 texto1"
+    "imgLibro2 texto2 texto2"
+    "imgLibro3 texto3 texto3";
     @include columnas(3);
     @include filas(3);
 }
 
 #fotolibro1{
     grid-area: imgLibro1;
-    padding-left: 20px;
+    background-image: url(../../imagenes/foto_marce/trenes/pagina_de_trenes/12.jpg);
+    background-size: cover;
 }
 #fotolibro2{
     grid-area: imgLibro2;
-    padding-left: 20px;
-    padding-bottom: 40px;
+    background-image: url(../../imagenes/im_libro.jpg);
+    background-size: cover;
 }
 #fotolibro3{
     grid-area: imgLibro3;
-    padding-left: 20px;
-    padding-bottom: 40px;
+    background-image: url(../../imagenes/im_libro.jpg);
+    background-size: cover;
 }
 
 #textoLibro1{
@@ -523,8 +524,8 @@ header{
     display: flex;
     flex-direction: column;
     background-color: $gris_oscuro;
-    margin-bottom: 39px;
-    margin-right: 40px;
+    margin-right: 80px;
+    margin-bottom: 80px;
 }
 
 .tituloLibro{
@@ -539,9 +540,9 @@ header{
 }
 .descripcionLibro{
     @extend .h2;
-    font-size: 20px;
+    font-size: 30px;
     letter-spacing: normal;
-    line-height: 30px;
+    line-height: 40px;
     
 
     padding-left: 20px;
@@ -550,10 +551,11 @@ header{
 }
 
 .fotoLibro{
-    @include sizes_wh(400px, 300px);
+    @include sizes_wh(auto, 400px);
+    background-size: cover;
+    margin-bottom: 80px;
+    margin-left: 40px;
 }
-
-
 
 /* FIN - LIBROS*/
 
@@ -1059,6 +1061,47 @@ header{
 
 /* FIN - Contacto Mobile */
 
+/* INICIO - Libros Mobile */
+
+#titulo-bajo-imagen{
+    text-align: center;
+}
+
+.textoIntroductorio{
+    font-size: 25px;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.libros{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.fotoLibro{
+    @include sizes_wh(auto, 400px);
+    background-size: cover;
+    margin-right: 40px;
+    margin-left: 40px;
+    margin-bottom: 0px;
+}
+.contTexto{
+    display: flex;
+    flex-direction: column;
+    background-color: $gris_oscuro;
+
+    padding-bottom: 20px;
+    margin-right: 40px;
+    margin-left: 40px;
+    margin-bottom: 40px;
+
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* FIN - Libros Mobile */
 }
 
 
