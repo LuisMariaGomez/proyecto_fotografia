@@ -25,6 +25,10 @@
     opacity: 1;
   }
 }
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   padding: 0px;
   margin: 0px;
@@ -38,6 +42,27 @@ img {
   max-width: 100%;
 }
 
+/* INICIO - Boton para subir */
+.btn-scrolltop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 15px 20px;
+  background: rgba(255, 0, 0, 0);
+  border: 1px solid rgba(255, 255, 255, 0);
+  border-radius: 100%;
+  cursor: pointer;
+  transform: translateY(100px);
+  transition: 0.3s;
+  width: 100px;
+  height: 100px;
+}
+
+.btn-scrolltop-on {
+  transform: translateY(0);
+}
+
+/* FIN - Boton para subir */
 /* INICIO - Header */
 .headerMobile {
   display: none;
@@ -47,58 +72,103 @@ img {
   display: none;
 }
 
+.abrir-menu,
+.cerrar-menu {
+  display: none;
+}
+
+/* INICIO - Header Desktop y Mobile */
 header {
-  animation-duration: 2s;
-  animation-name: aparecer;
-  animation-iteration-count: 1;
-  width: 100%;
-  height: auto;
-  display: grid;
-  grid-template-areas: "logo none nav";
   position: absolute;
   z-index: 1;
-  align-items: center;
-}
-header nav {
-  animation-duration: 1s;
-  animation-name: aparecer;
-  animation-iteration-count: 1;
-  grid-area: nav;
-  justify-self: end;
-  padding-right: 100px;
-  padding-top: 20px;
-}
-header nav ul {
   display: flex;
-  list-style: none;
-  padding-left: 40px;
-}
-header nav ul li {
-  font-weight: 200;
-  font-family: "Outfit", sans-serif;
-  font-size: 21px;
-}
-header nav ul li a {
-  color: lightgray;
-  text-decoration: none;
-  padding-right: 50px;
-  font-size: 30px;
-}
-header nav ul li a:hover {
-  transition: 1s;
-  color: white;
-  font-size: 35px;
-  font-weight: bold;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.1764705882);
+  width: 100%;
 }
 
 .logo {
-  grid-area: logo;
   width: 400px;
-  height: auto;
 }
 
-/* FIN - Header */
-/* INCIO - Footer */
+.nav-list {
+  list-style-type: none;
+  display: flex;
+  gap: 1rem;
+  padding-left: 80px;
+}
+
+.nav-list li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 35px;
+  padding-left: 20px;
+}
+
+.abrir-menu,
+.cerrar-menu {
+  display: none;
+}
+
+@media screen and (max-width: 550px) {
+  .abrir-menu,
+  .cerrar-menu {
+    display: block;
+    border: 0;
+    font-size: 1.25rem;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  header {
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
+  .logo {
+    width: 300px;
+  }
+  .abrir-menu {
+    color: #ffffff;
+    padding-right: 20px;
+  }
+  .cerrar-menu {
+    color: #ececec;
+  }
+  .nav {
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 1rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #1c1c1c;
+    padding: 2rem;
+    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
+  }
+  .nav.visible {
+    opacity: 1;
+    visibility: visible;
+  }
+  .nav-list {
+    flex-direction: column;
+    align-items: end;
+    background-color: #1c1c1c;
+    padding-right: 10px;
+    padding-bottom: 10px;
+  }
+  .nav-list li a {
+    color: rgba(236, 236, 236, 0.9254901961);
+  }
+}
+/* FIN - Header Desktop y Mobile */
 .contenedoresFoot {
   margin-bottom: 10px;
 }
@@ -214,10 +284,11 @@ header nav ul li a:hover {
 
 #imagenMitad1 {
   grid-area: img1;
-  background-image: url(../../imagenes/foto_marce/agua/3.jpg);
+  background: linear-gradient(to right, rgb(0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url(../../imagenes/foto_marce/agua/3.jpg);
   background-size: cover;
-  width: auto;
-  height: 500px;
+  width: 900px;
+  height: 600px;
+  background-position: 0px -250px;
 }
 
 #texto1 {
@@ -225,11 +296,11 @@ header nav ul li a:hover {
 }
 
 #imagenMitad2 {
-  grid-area: img2;
-  background-image: url(../../imagenes/foto_marce/agua/4.jpg);
+  background: linear-gradient(to left, rgb(0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url(../../imagenes/foto_marce/agua/4.jpg);
   background-size: cover;
-  width: auto;
-  height: 500px;
+  width: 900px;
+  height: 600px;
+  background-position: 0px -160px;
 }
 
 #texto2 {
@@ -240,8 +311,9 @@ header nav ul li a:hover {
   grid-area: img3;
   background-image: url(../../imagenes/foto_marce/blanco_y_negro/2.jpg);
   background-size: cover;
-  width: auto;
-  height: 500px;
+  width: 800px;
+  height: 600px;
+  background-position: 0px -160px;
 }
 
 #texto3 {
@@ -292,35 +364,48 @@ header nav ul li a:hover {
   padding-bottom: 20px;
 }
 
+.titulo_proy_mobile {
+  display: none;
+}
+
 .imgProy {
   grid-column: 2/8;
   background-size: cover;
 }
 
 #proy1 {
-  background-image: url(../../imagenes/seccion_proy/1.jpg);
+  background: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0)), url(../../imagenes/seccion_proy/1.jpg);
+  background-size: cover;
   margin-top: 30px;
+  background-position: 0px -100px;
 }
 
 #proy2 {
-  background-image: url(../../imagenes/seccion_proy/2.jpg);
+  background: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)), url(../../imagenes/seccion_proy/2.jpg);
+  background-size: cover;
+  background-position: 0px -160px;
 }
 
 #proy3 {
-  background-image: url(../../imagenes/seccion_proy/3.jpg);
+  background: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0)), url(../../imagenes/seccion_proy/3.jpg);
+  background-size: cover;
+  background-position: 0px -160px;
 }
 
 #proy4 {
-  background-image: url(../../imagenes/seccion_proy/4.jpg);
+  background: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)), url(../../imagenes/seccion_proy/4.jpg);
+  background-size: cover;
 }
 
 #proy5 {
-  background-image: url(../../imagenes/seccion_proy/5.jpg);
+  background: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)), url(../../imagenes/seccion_proy/5.jpg);
+  background-size: cover;
   background-position: 0px -180px;
 }
 
 #proy6 {
-  background-image: url(../../imagenes/seccion_proy/6.jpg);
+  background: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0)), url(../../imagenes/seccion_proy/6.jpg);
+  background-size: cover;
   background-position: 0px -200px;
 }
 
@@ -627,12 +712,15 @@ header nav ul li a:hover {
 
 #imagen1 {
   grid-area: imagen1;
-  background-image: url(../../imagenes/foto_marce/trenes/1.jpg);
+  background: linear-gradient(to right, rgb(0, 0, 0), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0)), url(../../imagenes/foto_marce/trenes/1.jpg);
+  background-size: cover;
 }
 
 #imagen2 {
   grid-area: imagen2;
-  background-image: url(../../imagenes/foto_marce/agua/5.jpg);
+  background: linear-gradient(to left, rgb(0, 0, 0), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0)), url(../../imagenes/foto_marce/agua/5.jpg);
+  background-size: cover;
+  background-position: 0px -400px;
 }
 
 #imagen3 {
@@ -647,12 +735,14 @@ header nav ul li a:hover {
 
 #imagen5 {
   grid-area: imagen5;
-  background-image: url(../../imagenes/foto_marce/comidas/1.jpg);
+  background: linear-gradient(to right, rgb(0, 0, 0), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0)), url(../../imagenes/foto_marce/comidas/1.jpg);
+  background-size: cover;
 }
 
 #imagen6 {
   grid-area: imagen6;
-  background-image: url(../../imagenes/foto_marce/Institucional/1.jpg);
+  background: linear-gradient(to left, rgb(0, 0, 0), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0)), url(../../imagenes/foto_marce/Institucional/1.jpg);
+  background-size: cover;
 }
 
 /* FIN - PAGINA PROYECTOS */
@@ -730,6 +820,7 @@ header nav ul li a:hover {
   height: 650px;
   background-position: -10px;
   background-size: cover;
+  background-position: 0px -100px;
 }
 
 .contactoFormulario {
@@ -790,7 +881,7 @@ header nav ul li a:hover {
 
 /* FIN - CONTACTO*/
 /* MOBILE */
-@media (max-width: 768px) {
+@media (max-width: 550px) {
   /* INICIO - Propiedad para eliminar en vista mobile */
   .eliminarEnMobile {
     display: none;
@@ -799,36 +890,7 @@ header nav ul li a:hover {
     display: none;
   }
   /* FIN - Propiedad para eliminar en vista mobile */
-  /* INICIO - Header Mobile */
-  .logoMobile {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 40px;
-  }
-  .header {
-    position: static;
-    display: flex;
-    flex-direction: column;
-    background-color: black;
-  }
-  .listaLinksHead {
-    padding-right: 0px;
-    padding-top: 0px;
-    margin-top: 20px;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-  }
-  .listaLinks {
-    display: flex;
-    justify-content: space-between;
-  }
-  .navs:hover {
-    transition: 0s;
-    font-size: 30px;
-    font-weight: 200;
-  }
+  /* INICIO - Titulo y descripcion Mobile */
   .descripcion {
     width: 100%;
     display: flex;
@@ -850,6 +912,7 @@ header nav ul li a:hover {
     margin: 0px;
     padding-bottom: 10px;
   }
+  /* FIN - Titulo y descripcion Mobile */
   .seccion5 {
     display: grid;
     grid-template-areas: "instagram" "facebook";
@@ -860,7 +923,6 @@ header nav ul li a:hover {
   #logoFbMobile {
     grid-area: facebook;
   }
-  /* FIN - Header Mobile */
   /* Footer Mobile */
   titulosFooter {
     display: none;
@@ -893,7 +955,7 @@ header nav ul li a:hover {
     color: lightgray;
   }
   /* Footer Mobile */
-  /* Index Mobile */
+  /* INICIO - Index Mobile */
   #seccion2Mobile {
     display: flex;
     flex-direction: column;
@@ -908,16 +970,17 @@ header nav ul li a:hover {
     justify-content: center;
   }
   #texto1 {
-    background-image: url(../../imagenes/foto_marce/agua/3.jpg);
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../../imagenes/foto_marce/agua/3.jpg);
     background-size: cover;
+    background-position: 0px -120px;
   }
   #texto2 {
-    background-image: url(../../imagenes/foto_marce/agua/4.jpg);
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../../imagenes/foto_marce/agua/4.jpg);
     background-size: cover;
     background-position-y: -100px;
   }
   #texto3 {
-    background-image: url(../../imagenes/foto_marce/blanco_y_negro/2.jpg);
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../../imagenes/foto_marce/blanco_y_negro/2.jpg);
     background-size: cover;
     background-position-y: -100px;
   }
@@ -935,8 +998,50 @@ header nav ul li a:hover {
     justify-content: center;
     align-items: center;
   }
-  /* Index Mobile */
-  /* Proyectos Mobile */
+  .titulo_proy_mobile {
+    display: flex;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    padding-top: 30px;
+  }
+  #font_titulo_proy_mobile {
+    font-size: 40px;
+    letter-spacing: 10px;
+  }
+  #proy1 {
+    background-position: 0px 0px;
+  }
+  #proy2 {
+    background-position: 0px 0px;
+  }
+  #proy3 {
+    background-position: 0px 0px;
+  }
+  #proy5 {
+    background-position: 0px 0px;
+  }
+  #proy6 {
+    background-position: 0px 0px;
+  }
+  .logos_redes {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    justify-items: center;
+    align-items: center;
+    padding-bottom: 20px;
+    padding-top: 30px;
+  }
+  .logoMobile {
+    display: block;
+  }
+  .img_redes {
+    width: 500px;
+  }
+  /* FIN - Index Mobile */
+  /* INICIO - Proyectos Mobile */
   #contenedorImgSup4 {
     display: none;
   }
@@ -972,18 +1077,22 @@ header nav ul li a:hover {
   #imagen1 {
     grid-area: imagen1;
     background-image: url(../../imagenes/foto_marce/trenes/1.jpg);
+    background-position: -200px 0px;
   }
   #imagen2 {
     grid-area: imagen2;
     background-image: url(../../imagenes/foto_marce/agua/5.jpg);
+    background-position: 0px 0px;
   }
   #imagen3 {
     grid-area: imagen3;
     background-image: url(../../imagenes/foto_marce/blanco_y_negro/7.jpg);
+    background-position: -100px 0px;
   }
   #imagen4 {
     grid-area: imagen4;
     background-image: url(../../imagenes/foto_marce/desnudos/2.jpg);
+    background-position: -250px 0px;
   }
   #imagen5 {
     grid-area: imagen5;
@@ -1003,23 +1112,24 @@ header nav ul li a:hover {
   header {
     background-color: black;
   }
-  /* Proyectos Mobile */
+  /* FIN - Proyectos Mobile */
   /* INICIO - Contacto Mobile */
   .contactoFormulario {
-    display: grid;
-    grid-template-areas: "formilarioTexto" "formulario";
+    display: flex;
+    flex-direction: column;
   }
   .contacto2 {
-    grid-area: formilarioTexto;
     height: 250px;
-    padding-left: 100px;
-    padding-right: 100px;
     align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: auto;
+    height: auto;
+    padding: 0px;
   }
   .formulario {
-    grid-area: formulario;
-    margin-right: 0px;
-    padding-left: 100px;
+    margin: 0px;
+    padding-top: 50px;
     padding-bottom: 50px;
   }
   /* FIN - Contacto Mobile */
@@ -1057,6 +1167,30 @@ header nav ul li a:hover {
     align-items: center;
   }
   /* FIN - Libros Mobile */
+  /* INICIO - BLOG */
+  .foto_descripcion {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .fotoBlog {
+    padding-left: 0px;
+  }
+  .tituloPremio {
+    font-size: 50px;
+  }
+  .premioAndDescripcion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .subLetrasImgSup {
+    text-align: left;
+  }
+  /* FIN - BLOG */
 }
 
 /*# sourceMappingURL=styles2.css.map */

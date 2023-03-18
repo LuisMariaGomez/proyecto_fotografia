@@ -4,8 +4,6 @@
 @import "extends";
 @import "maps";
 
-
-
 @keyframes aparecer {
     0%{
         opacity: 0;
@@ -15,8 +13,9 @@
     }
 }
 
-
-
+html{
+    scroll-behavior: smooth;
+}
 
 *{
     padding: 0px;
@@ -29,6 +28,27 @@
 img{
     max-width: 100%;
 }
+/* INICIO - Boton para subir */
+
+.btn-scrolltop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 15px 20px;
+    background: rgba(255, 0, 0, 0);
+    border: 1px solid rgba(255, 255, 255, 0);
+    border-radius: 100%;
+    cursor: pointer;
+    transform: translateY(100px);
+    transition: 0.3s;
+    @include sizes_wh(100px, 100px);
+  }
+  
+  .btn-scrolltop-on {
+    transform: translateY(0);
+  }
+
+/* FIN - Boton para subir */
 
 /* INICIO - Header */
 
@@ -39,62 +59,115 @@ img{
     display: map-get($mapa, nada)
 }
 
-header{
+.abrir-menu,
+.cerrar-menu {
+    display: none;
+}
 
-    animation-duration: 2s;
-    animation-name: aparecer;
-    animation-iteration-count: 1;
+/* INICIO - Header Desktop y Mobile */
 
-    @include sizes_wh(100%,auto);
-    display: grid;
-    grid-template-areas:
-    "logo none nav";
+header {
     position: absolute;
     z-index: 1;
-    align-items: map-get($mapa, centro);
-    nav{
-        animation-duration: 1s;
-        animation-name: aparecer;
-        animation-iteration-count: 1;
 
-        grid-area: nav;
-        justify-self: end;
-        padding-right: 100px;
-        padding-top: 20px;
-        
-        ul{
-            display: flex;
-            list-style: map-get($mapa, nada);
-            padding-left: 40px;
-            li{
-                font-weight: 200;
-                font-family: $fuente_secundaria;
-                font-size: 21px;
-                a{
-                    color: $gris_claro;
-                    text-decoration: map-get($mapa, nada);
-                    padding-right: 50px;
-                    font-size: 30px;
-                    &:hover{
-                        transition: 1s;
-                        color: $blanco;
-                        font-size: 35px;
-                        font-weight: bold;
-                    }
-                }
-            }
-        }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #0000002d;
+    width: 100%;
+}
+
+.logo {
+    width: 400px;
+}
+
+.nav-list {
+    list-style-type: none;
+    display: flex;
+    gap: 1rem;
+    padding-left: 80px;
+}
+
+.nav-list li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 35px;
+    padding-left: 20px;
+}
+
+.abrir-menu,
+.cerrar-menu {
+    display: none;
+}
+
+@media screen and (max-width: 550px) {
+    .abrir-menu,
+    .cerrar-menu {
+        display: block;
+        border: 0;
+        font-size: 1.25rem;
+        background-color: transparent;
+        cursor: pointer;
+    }
+
+    header{
+        justify-content: space-between;
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        padding-bottom: 10px;
+        padding-top: 10px;
+    }
+
+    .logo {
+        width: 300px;
+    }
+
+    .abrir-menu {
+        color: #ffffff;
+        padding-right: 20px;
+    }
+
+    .cerrar-menu {
+        color: #ececec;
+    }
+
+    .nav {
+        opacity: 0;
+        visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        gap: 1rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #1c1c1c;
+        padding: 2rem;
+        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
+    }
+
+    .nav.visible {
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .nav-list {
+        flex-direction: column;
+        align-items: end;
+        background-color: #1c1c1c;
+        padding-right: 10px;
+        padding-bottom: 10px;
+    }
+
+    .nav-list li a {
+        color: #ecececec;
     }
 }
 
-.logo{
-    grid-area: logo;
-    @include sizes_wh(400px,auto);
-}
-
-/* FIN - Header */
-
-/* INCIO - Footer */
+/* FIN - Header Desktop y Mobile */
 
 .contenedoresFoot{
     @extend .flex_center_column;
@@ -216,20 +289,24 @@ header{
 
 #imagenMitad1{
     grid-area: img1;
-    background-image: url(../../imagenes/foto_marce/agua/3.jpg);
+    background: linear-gradient(to right, rgba(0, 0, 0, 1),rgba(0,0,0,0),rgba(0,0,0,0)),
+    url(../../imagenes/foto_marce/agua/3.jpg);
     background-size: map-get($mapa, cubrir);
-    @include sizes_wh(auto, 500px);
+    @include sizes_wh(900px, 600px);
+    background-position: 0px -250px;
 }
 #texto1{
     grid-area: texto1;
 }
 
 #imagenMitad2{
-    grid-area: img2;
-    background-image: url(../../imagenes/foto_marce/agua/4.jpg);
-    background-size: map-get($mapa, cubrir);
-    @include sizes_wh(auto, 500px);
+    background: linear-gradient(to left, rgba(0, 0, 0, 1),rgba(0,0,0,0),rgba(0,0,0,0)),
+     url(../../imagenes/foto_marce/agua/4.jpg);
+    background-size: cover;
+    @include sizes_wh(900px, 600px);
+    background-position: 0px -160px;
 }
+
 
 #texto2{
     grid-area: texto2;
@@ -239,7 +316,8 @@ header{
     grid-area: img3;
     background-image: url(../../imagenes/foto_marce/blanco_y_negro/2.jpg);
     background-size: map-get($mapa, cubrir);
-    @include sizes_wh(auto, 500px);
+    @include sizes_wh(800px, 600px);
+    background-position: 0px -160px;
 }
 #texto3{
     grid-area: texto3;
@@ -293,6 +371,11 @@ header{
     background-color: $negro;
     padding-bottom: 20px;
 }
+
+.titulo_proy_mobile{
+    display: none;
+}
+
 .imgProy{
     grid-column: 2/8;
     background-size: cover;
@@ -300,29 +383,40 @@ header{
     @extend .flex_column_center_center;
 }
 #proy1{
-    background-image: url(../../imagenes/seccion_proy/1.jpg);
+    background: linear-gradient(to left, rgba(0, 0, 0, 0),rgba(0,0,0, .3),rgba(0,0,0, 0)), 
+    url(../../imagenes/seccion_proy/1.jpg);
+    background-size: cover;
     margin-top: 30px;
-
+    background-position: 0px -100px;
 }
 #proy2{
-    background-image: url(../../imagenes/seccion_proy/2.jpg);
-
+    background: linear-gradient(to left, rgba(0, 0, 0, 0),rgba(0,0,0, .5),rgba(0,0,0, 0)), 
+    url(../../imagenes/seccion_proy/2.jpg);
+    background-size: cover;
+    background-position: 0px -160px;
 }
 #proy3{
-    background-image: url(../../imagenes/seccion_proy/3.jpg);
+    background: linear-gradient(to left, rgba(0, 0, 0, 0),rgba(0,0,0, .3),rgba(0,0,0, 0)), 
+    url(../../imagenes/seccion_proy/3.jpg);
+    background-size: cover;
+    background-position: 0px -160px;
 
 }
 #proy4{
-    background-image: url(../../imagenes/seccion_proy/4.jpg);
-
+    background: linear-gradient(to left, rgba(0, 0, 0, 0),rgba(0,0,0, .2),rgba(0,0,0, 0)), 
+    url(../../imagenes/seccion_proy/4.jpg);
+    background-size: cover;
 }
 #proy5{
-    background-image: url(../../imagenes/seccion_proy/5.jpg);
-
+    background: linear-gradient(to left, rgba(0, 0, 0, 0),rgba(0,0,0, .2),rgba(0,0,0, 0)), 
+    url(../../imagenes/seccion_proy/5.jpg);
+    background-size: cover;
     background-position: 0px -180px;
 }
 #proy6{
-    background-image: url(../../imagenes/seccion_proy/6.jpg);
+    background: linear-gradient(to left, rgba(0, 0, 0, 0),rgba(0,0,0, .3),rgba(0,0,0, 0)), 
+    url(../../imagenes/seccion_proy/6.jpg);
+    background-size: cover;
     background-position: 0px -200px;
 }
 
@@ -620,11 +714,16 @@ header{
 }
 #imagen1{
     grid-area: imagen1;
-    background-image: url(../../imagenes/foto_marce/trenes/1.jpg);
+    background: linear-gradient(to right, rgba(0, 0, 0, 1),rgba(0,0,0, .3),rgba(0,0,0, 0)), 
+    url(../../imagenes/foto_marce/trenes/1.jpg);
+    background-size: cover;
 }
 #imagen2{
     grid-area: imagen2;
-    background-image: url(../../imagenes/foto_marce/agua/5.jpg);
+    background: linear-gradient(to left, rgba(0, 0, 0, 1),rgba(0,0,0, .3),rgba(0,0,0, 0)), 
+    url(../../imagenes/foto_marce/agua/5.jpg);
+    background-size: cover;
+    background-position: 0px -400px;
 }
 #imagen3{
     grid-area: imagen3;
@@ -636,11 +735,15 @@ header{
 }
 #imagen5{
     grid-area: imagen5;
-    background-image: url(../../imagenes/foto_marce/comidas/1.jpg);
+    background: linear-gradient(to right, rgba(0, 0, 0, 1),rgba(0,0,0, .3),rgba(0,0,0, 0)), 
+    url(../../imagenes/foto_marce/comidas/1.jpg);
+    background-size: cover;
 }
 #imagen6{
     grid-area: imagen6;
-    background-image: url(../../imagenes/foto_marce/Institucional/1.jpg);
+    background: linear-gradient(to left, rgba(0, 0, 0, 1),rgba(0,0,0, .3),rgba(0,0,0, 0)), 
+    url(../../imagenes/foto_marce/Institucional/1.jpg);
+    background-size: cover;
 }
 
 /* FIN - PAGINA PROYECTOS */
@@ -721,6 +824,7 @@ header{
     @include sizes_wh(auto, 650px);
     background-position: -10px;
     background-size: map-get($mapa, cubrir);
+    background-position: 0px -100px;
 }
 .contactoFormulario{
     display: flex;
@@ -771,7 +875,7 @@ header{
 
 /* MOBILE */
 
-@media (max-width: 768px){
+@media (max-width: 550px){
 
     /* INICIO - Propiedad para eliminar en vista mobile */
 
@@ -784,42 +888,8 @@ header{
 
     /* FIN - Propiedad para eliminar en vista mobile */
 
-    /* INICIO - Header Mobile */
+    /* INICIO - Titulo y descripcion Mobile */
 
-    .logoMobile{
-        display: flex;
-        flex-direction: column;
-
-        align-items: map-get($mapa, centro);
-        margin-bottom: 40px;
-    }
-    .header{
-        position: static;
-        display: flex;
-        flex-direction: column;
-        background-color: $negro;
-    }
-    .listaLinksHead{
-        padding-right: 0px;
-        padding-top: 0px;
-
-        margin-top: 20px;
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .listaLinks{
-        display: flex;
-        justify-content: space-between;
-    }
-    .navs{
-        &:hover{
-            transition: 0s;
-            font-size: 30px;
-            font-weight: 200;
-        }
-    }
     .descripcion{
         width: 100%;
         display: flex;
@@ -843,6 +913,8 @@ header{
         padding-bottom: 10px;
     }
 
+    /* FIN - Titulo y descripcion Mobile */
+
     .seccion5{
         display: grid;
         grid-template-areas: 
@@ -856,7 +928,6 @@ header{
         grid-area: facebook;
     }
 
-    /* FIN - Header Mobile */
 
     /* Footer Mobile */
 
@@ -899,7 +970,7 @@ header{
 
     /* Footer Mobile */
 
-    /* Index Mobile */
+    /* INICIO - Index Mobile */
 
     #seccion2Mobile{
         display: flex;
@@ -914,19 +985,20 @@ header{
         justify-content: map-get($mapa, centro);
     }
     #texto1{
-
-        background-image: url(../../imagenes/foto_marce/agua/3.jpg);
+        background: linear-gradient(to left, rgba(0, 0, 0, .2),rgba(0,0,0, .2),rgba(0,0,0, .2)), 
+        url(../../imagenes/foto_marce/agua/3.jpg);
         background-size: map-get($mapa, cubrir);
+        background-position: 0px -120px;
     }
     #texto2{
-
-        background-image: url(../../imagenes/foto_marce/agua/4.jpg);
+        background: linear-gradient(to left, rgba(0, 0, 0, .2),rgba(0,0,0, .2),rgba(0,0,0, .2)), 
+        url(../../imagenes/foto_marce/agua/4.jpg);
         background-size: map-get($mapa, cubrir);
         background-position-y: -100px;
     }
     #texto3{
-
-        background-image: url(../../imagenes/foto_marce/blanco_y_negro/2.jpg);
+        background: linear-gradient(to left, rgba(0, 0, 0, .3),rgba(0,0,0, .3),rgba(0,0,0, .3)), 
+        url(../../imagenes/foto_marce/blanco_y_negro/2.jpg);
         background-size: map-get($mapa, cubrir);
         background-position-y: -100px;
     }
@@ -948,9 +1020,60 @@ header{
         align-items: center;
     }
 
-    /* Index Mobile */
+    .titulo_proy_mobile{
+        display: flex;
+        color: white;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+        padding-top: 30px;
+    }
 
-    /* Proyectos Mobile */
+    #font_titulo_proy_mobile{
+        font-size: 40px;
+        letter-spacing: 10px;
+    }
+
+    #proy1{
+        background-position: 0px 0px;
+    }
+    
+    #proy2{
+        background-position: 0px 0px;
+    }
+    
+    #proy3{
+        background-position: 0px 0px;
+    }
+
+    #proy5{
+        background-position: 0px 0px;
+    }
+
+    #proy6{
+        background-position: 0px 0px;
+    }
+
+    .logos_redes{
+        display: flex;
+        flex-direction: column;
+        background-color: black;
+        justify-items: center;
+        align-items: center;
+        padding-bottom: 20px;
+        padding-top: 30px;
+    }
+    .logoMobile{
+        display: block;
+    }
+
+    .img_redes{
+        width: 500px;
+    }
+
+    /* FIN - Index Mobile */
+
+    /* INICIO - Proyectos Mobile */
     #contenedorImgSup4{
         display: map-get($mapa, nada);
     }
@@ -1001,18 +1124,22 @@ header{
     #imagen1{
         grid-area: imagen1;
         background-image: url(../../imagenes/foto_marce/trenes/1.jpg);
+        background-position: -200px 0px;
     }
     #imagen2{
         grid-area: imagen2;
         background-image: url(../../imagenes/foto_marce/agua/5.jpg);
+        background-position: 0px 0px;
     }
     #imagen3{
         grid-area: imagen3;
         background-image: url(../../imagenes/foto_marce/blanco_y_negro/7.jpg);
+        background-position: -100px 0px;
     }
     #imagen4{
         grid-area: imagen4;
         background-image: url(../../imagenes/foto_marce/desnudos/2.jpg);
+        background-position: -250px 0px;
     }
     #imagen5{
         grid-area: imagen5;
@@ -1035,27 +1162,25 @@ header{
         background-color: $negro;
     }
 
-/* Proyectos Mobile */
+/* FIN - Proyectos Mobile */
 
 /* INICIO - Contacto Mobile */
 
 .contactoFormulario{
-    display: grid;
-    grid-template-areas: 
-    "formilarioTexto"
-    "formulario";
+    display: flex;
+    flex-direction: column;
 }
 .contacto2{
-    grid-area: formilarioTexto;
     height: 250px;
-    padding-left: 100px;
-    padding-right: 100px;
     align-items: center;
+    justify-content: center;
+    text-align: center;
+    @include sizes_wh(auto, auto);
+    padding: 0px;
 }
 .formulario{
-    grid-area: formulario;
-    margin-right: 0px;
-    padding-left: 100px;
+    margin: 0px;
+    padding-top: 50px;
     padding-bottom: 50px;
 }
 
@@ -1102,6 +1227,36 @@ header{
 
 
 /* FIN - Libros Mobile */
+
+/* INICIO - BLOG */
+
+.foto_descripcion{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.fotoBlog{
+    padding-left: 0px;
+}
+
+.tituloPremio{
+    font-size: 50px;
+}
+
+.premioAndDescripcion{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.subLetrasImgSup{
+    text-align: left;
+}
+/* FIN - BLOG */
 }
 
 

@@ -9,6 +9,8 @@
     <!--Keywords-->
     <meta name="keywords" content="foto, fotos, foto de perfil, producciones foto arte, fotografia, estudio de fotográfico">
     <title>MARCELO RICO PH.</title>
+    <!--Link iconos de Bootstrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <link rel="icono" href="./Imagenes/logoSup.jpg"> <!--No me pone el icono arriba en la pesatana-->
     <link rel="stylesheet" href="./estilos/css/styles2.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,12 +23,14 @@
 
 </head>
 <body>
-    <header class="header">
+    <header>
         <div class="contLogo">
             <a href="./index.html"><img class='logo' src="./imagenes/logo.png" alt="logoMarceloRico"/></a>
         </div>
-        <nav class="listaLinksHead">
-            <ul class="listaLinks">
+        <button id="abrir" class="abrir-menu"><i class="bi bi-list"></i></button>
+        <nav class="nav" id="nav">
+            <button class="cerrar-menu" id="cerrar"><i class="bi bi-x"></i></button>
+            <ul class="nav-list">
                 <li id="link1"><a class="navs" href="./pages/libros.html" >LIBROS</a></li>
                 <li id="link2"><a class="navs" href="./pages/proyectos.html">PROYECTOS</a></li>
                 <li id="link3"><a class="navs" href="./pages/blog.html">BLOG</a></li>
@@ -117,6 +121,9 @@
 <!--  INICIO - Seccion 4 -->
 <section class="seccion4">
 
+    <div class="titulo_proy_mobile">
+        <h2 id="font_titulo_proy_mobile">PROYECTOS</h2>
+    </div>
 
     <div class="seccionProy">
         <div id="proy1" class="imgProy">
@@ -177,46 +184,51 @@
     <section class="imagenesSecc5" id="eliminarEnMobile">
 
         <div class="img_ig" id="imgIG1">
-            <a href="https://www.instagram.com/p/CngpSRWuOAm/"><img class="imgIG" src="./imagenes/seccion_ig/1.png" alt="fotoInstagram1"/></a>
+            <a href="https://www.instagram.com/p/CngpSRWuOAm/" target="_blank"><img class="imgIG" src="./imagenes/seccion_ig/1.png" alt="fotoInstagram1"/></a>
         </div>
 
         <div class="img_ig" id="imgIG2">
-            <a href="https://www.instagram.com/p/CkNgk7LOB32/"><img class="imgIG" src="./imagenes/seccion_ig/2.png" alt="fotoInstagram2"/></a>
+            <a href="https://www.instagram.com/p/CkNgk7LOB32/" target="_blank"><img class="imgIG" src="./imagenes/seccion_ig/2.png" alt="fotoInstagram2"/></a>
         </div>
 
         <div class="img_ig" id="imgIG3">
-            <a href="https://www.instagram.com/p/CZHq0oxrKRY/"><img class="imgIG" src="./imagenes/seccion_ig/3.png" alt="fotoInstagram3"/></a>
+            <a href="https://www.instagram.com/p/CZHq0oxrKRY/" target="_blank"><img class="imgIG" src="./imagenes/seccion_ig/3.png" alt="fotoInstagram3"/></a>
         </div>
 
         <div class="img_ig" id="imgIG4">
-            <a href="https://www.instagram.com/p/CUrysoFrDBF/"><img class="imgIG" src="./imagenes/seccion_ig/4.png" alt="fotoInstagram4"/></a>
+            <a href="https://www.instagram.com/p/CUrysoFrDBF/" target="_blank"><img class="imgIG" src="./imagenes/seccion_ig/4.png" alt="fotoInstagram4"/></a>
         </div>
 
         <div class="img_ig" id="imgIG5">
-            <a href="https://www.instagram.com/p/CQe4_THLaa3/"><img class="imgIG" src="./imagenes/seccion_ig/5.png" alt="fotoInstagram5"/></a>
+            <a href="https://www.instagram.com/p/CQe4_THLaa3/" target="_blank"><img class="imgIG" src="./imagenes/seccion_ig/5.png" alt="fotoInstagram5"/></a>
         </div>
 
         <div class="img_ig" id="imgIG6">
-            <a href="https://www.instagram.com/p/COQGaubL1bf/"><img class="imgIG" src="./imagenes/seccion_ig/6.png" alt="fotoInstagram6"/></a>
+            <a href="https://www.instagram.com/p/COQGaubL1bf/" target="_blank"><img class="imgIG" src="./imagenes/seccion_ig/6.png" alt="fotoInstagram6"/></a>
         </div>
 
         <div class="img_ig" id="imgIG7">
-            <a href="https://www.instagram.com/p/CI4DREdlAvc/"><img class="imgIG" src="./imagenes/seccion_ig/7.png" alt="fotoInstagram7"/></a>
+            <a href="https://www.instagram.com/p/CI4DREdlAvc/" target="_blank"><img class="imgIG" src="./imagenes/seccion_ig/7.png" alt="fotoInstagram7"/></a>
         </div>
 
         <div class="img_ig" id="imgIG8">
-            <a href="https://www.instagram.com/p/CJ8aU7kLC7q/"><img class="imgIG" src="./imagenes/seccion_ig/8.png" alt="fotoInstagram8"/></a>
+            <a href="https://www.instagram.com/p/CJ8aU7kLC7q/" target="_blank"><img class="imgIG" src="./imagenes/seccion_ig/8.png" alt="fotoInstagram8"/></a>
         </div>
     </section>
+</div>
 
-    <div class="logoMobile" id="logoIgMobile">
-        <a href="https://www.instagram.com/marcelorico13/" target="_blank"><img class='logo' src="./imagenes/logo_ig_mobile.png" alt="logoIgMobile"/></a>
+<div class="titulo_proy_mobile">
+    <h2 id="font_titulo_proy_mobile">REDES</h2>
+</div>
+
+<div class="logos_redes">
+    <div class="logoMobile">
+        <a href="https://www.instagram.com/marcelorico13/" target="_blank"><img class='img_redes' src="./imagenes/logo_ig_mobile.png" alt="logoIgMobile"/></a>
     </div>
     
-    <div class="logoMobile" id="logoFbMobile">
-        <a href="https://www.facebook.com/marceloriko" target="_blank"><img class='logo' src="./imagenes/logo_fb_mobile.png" alt="logoFbMobile"/></a>
+    <div class="logoMobile" >
+        <a href="https://www.facebook.com/marceloriko" target="_blank"><img class='img_redes' src="./imagenes/logo_fb_mobile.png" alt="logoFbMobile"/></a>
     </div>
-
 </div>
 <footer>
     <div class="foot eliminarEnMobile" id="foot">
@@ -229,8 +241,8 @@
             </div>
 
             <div class="contenedoresRedes">
-                <a href="https://www.facebook.com/marceloriko"><img class="logoRedes" src="./imagenes/imagenes_redes/facebook.png" alt="imgFacebook"/></a>
-                <a href="https://www.instagram.com/marcelorico13/"><img class="logoRedes" src="./imagenes/imagenes_redes/instagram.png" alt="imgInstagram"/></a>
+                <a href="https://www.facebook.com/marceloriko" target="_blank"><img class="logoRedes" src="./imagenes/imagenes_redes/facebook.png" alt="imgFacebook"/></a>
+                <a href="https://www.instagram.com/marcelorico13/" target="_blank"><img class="logoRedes" src="./imagenes/imagenes_redes/instagram.png" alt="imgInstagram"/></a>
             </div>
 
         </div>
@@ -242,8 +254,8 @@
                 <h2 class="titulosFoot">Esponsors</h2>
             </div>
             <div class="contenedorSponsors">
-                <a href="https://www.epson.com.au"><img class="logoSponsors" src="./imagenes/imagenes_redes/epson1.png" alt="epsonImg"/></a>
-                <a href="https://www.canon.es/apps/image-canon/"><img class="logoSponsors" src="./imagenes/imagenes_redes/canon.png" alt="canonImg"/></a>
+                <a href="https://www.epson.com.au" target="_blank"><img class="logoSponsors" src="./imagenes/imagenes_redes/epson1.png" alt="epsonImg"/></a>
+                <a href="https://www.canon.es/apps/image-canon/" target="_blank"><img class="logoSponsors" src="./imagenes/imagenes_redes/canon.png" alt="canonImg"/></a>
             </div>
         </div>
 
@@ -275,22 +287,16 @@
             </div>
         </div>
     </div>
-
-    <div class="footerMobile">
-        <nav>
-            <ul class="listaLinksfoot">
-                <li class="linkfoot"><a class="navsfoot" href="./pages/libros.html" >LIBROS</a></li>
-                <li class="linkfoot"><a class="navsfoot" href="./pages/proyectos.html">PROYECTOS</a></li>
-                <li class="linkfoot"><a class="navsfoot" href="./pages/blog.html">BLOG</a></li>
-                <li class="linkfoot"><a class="navsfoot" href="./pages/contacto.html">CONTACTO</a></li>
-            </ul>
-        </nav>
-    </div>
 </footer>
-</div> 
 <!--  FIN - Seccion 5 -->
-    <!--Link Bootstrap-->
-    <script src="./libs/bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+<!--Boton para subir-->
+<button class="btn-scrolltop" id="btn_scrolltop">
+    <img src="./imagenes/boton_subir.png" alt="boton_subir">
+</button>
+<!--Link JS-->
+<script src="./libs/js/main.js"></script>
+<!--Link Bootstrap-->
+<script src="./libs/bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
 </main>
 </body>
 </html>
