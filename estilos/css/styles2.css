@@ -497,6 +497,12 @@ header {
 
 /* FIN - ATRIBUTOS CONTENEDORES DE IMAGENES SUPERIORES*/
 /* INICIO - PAGINA FOTOS DE FERROCARRILES*/
+#contenedorImgSup5 {
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../../imagenes/foto_marce/trenes/pagina_de_trenes/12.jpg);
+  background-size: cover;
+  background-position: 0px -400px;
+}
+
 .imgTrenes {
   background-size: cover;
   width: auto;
@@ -537,13 +543,6 @@ header {
 
 #fotoTren9 {
   background-image: url(../../imagenes/foto_marce/trenes/pagina_de_trenes/13.jpg);
-}
-
-#contenedorImgSup5 {
-  background-image: url(../../imagenes/foto_marce/trenes/pagina_de_trenes/12.jpg);
-  background-size: cover;
-  width: 1400px;
-  height: 700px;
 }
 
 /* FIN - PAGINA FOTOS DE FERROCARRILES*/
@@ -651,7 +650,7 @@ header {
 /* FIN - LIBROS*/
 /* INICIO - PAGINA PROYECTOS*/
 #contenedorImgSup4 {
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(173, 173, 173, 0)), url(../../imagenes/foto_marce/blanco_y_negro/6.jpg);
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url(../../imagenes/foto_marce/blanco_y_negro/6.jpg);
   width: auto;
   height: 650px;
   background-size: cover;
@@ -748,7 +747,7 @@ header {
 /* FIN - PAGINA PROYECTOS */
 /* INICIO - BLOG */
 #contenedorImgSup7 {
-  background-image: url(../../imagenes/foto_marce/blanco_y_negro/foto_marce3.jpg);
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)), url(../../imagenes/foto_marce/blanco_y_negro/foto_marce3.jpg);
   width: auto;
   height: 650px;
   background-size: cover;

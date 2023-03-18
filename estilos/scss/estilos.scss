@@ -505,42 +505,45 @@ header {
 /* FIN - ATRIBUTOS CONTENEDORES DE IMAGENES SUPERIORES*/
 
 /* INICIO - PAGINA FOTOS DE FERROCARRILES*/
-    .imgTrenes{
-        background-size: map-get($mapa, cubrir);
-        @include sizes_wh(auto, 300px);
-    }
-    #fotoTren1{
-        background-image: url(../../imagenes/foto_marce/trenes/pagina_de_trenes/1.jpg); 
-    }
-    #fotoTren2{
-        background-image: url(../../imagenes/foto_marce/trenes/pagina_de_trenes/2.jpg);
-    }
-    #fotoTren3{
-        background-image: url(../../imagenes/foto_marce/trenes/pagina_de_trenes/3.jpg);
-    }
-    #fotoTren4{
-        background-image: url(../../imagenes/foto_marce/trenes/pagina_de_trenes/4.jpg);
-    }
-    #fotoTren5{
-        background-image: url(../../imagenes/foto_marce/trenes/pagina_de_trenes/5.jpg);
-    }
-    #fotoTren6{
-        background-image: url(../../imagenes/foto_marce/trenes/pagina_de_trenes/6.jpg);
-    }
-    #fotoTren7{
-        background-image: url(../../imagenes/foto_marce/trenes/pagina_de_trenes/7.jpg);
-    }
-    #fotoTren8{
-        background-image: url(../../imagenes/foto_marce/trenes/pagina_de_trenes/8.jpg);
-    }
-    #fotoTren9{
-        background-image: url(../../imagenes/foto_marce/trenes/pagina_de_trenes/13.jpg);
-    }
-    #contenedorImgSup5{
-        background-image: url(../../imagenes/foto_marce/trenes/pagina_de_trenes/12.jpg);
-        background-size: map-get($mapa, cubrir);
-        @include sizes_wh(1400px, 700px);
-    }
+
+
+#contenedorImgSup5{
+    background: linear-gradient(to left, rgba(0, 0, 0, .3),rgba(0,0,0, .3),rgba(0,0,0, .3)),
+    url(../../imagenes/foto_marce/trenes/pagina_de_trenes/12.jpg);
+    background-size: map-get($mapa, cubrir);
+    background-position: 0px -400px;
+}
+.imgTrenes{
+    background-size: map-get($mapa, cubrir);
+    @include sizes_wh(auto, 300px);
+}
+#fotoTren1{
+    background-image: url(../../imagenes/foto_marce/trenes/pagina_de_trenes/1.jpg); 
+}
+#fotoTren2{
+    background-image: url(../../imagenes/foto_marce/trenes/pagina_de_trenes/2.jpg);
+}
+#fotoTren3{
+    background-image: url(../../imagenes/foto_marce/trenes/pagina_de_trenes/3.jpg);
+}
+#fotoTren4{
+    background-image: url(../../imagenes/foto_marce/trenes/pagina_de_trenes/4.jpg);
+}
+#fotoTren5{
+    background-image: url(../../imagenes/foto_marce/trenes/pagina_de_trenes/5.jpg);
+}
+#fotoTren6{
+    background-image: url(../../imagenes/foto_marce/trenes/pagina_de_trenes/6.jpg);
+}
+#fotoTren7{
+    background-image: url(../../imagenes/foto_marce/trenes/pagina_de_trenes/7.jpg);
+}
+#fotoTren8{
+    background-image: url(../../imagenes/foto_marce/trenes/pagina_de_trenes/8.jpg);
+}
+#fotoTren9{
+    background-image: url(../../imagenes/foto_marce/trenes/pagina_de_trenes/13.jpg);
+}
     
 /* FIN - PAGINA FOTOS DE FERROCARRILES*/
 
@@ -656,7 +659,8 @@ header {
 /* INICIO - PAGINA PROYECTOS*/
 
 #contenedorImgSup4{
-    background: linear-gradient($color-gradiente1,$color-gradiente2), url(../../imagenes/foto_marce/blanco_y_negro/6.jpg);
+    background: linear-gradient(to left, rgba(0, 0, 0, .3),rgba(0,0,0,.5),rgba(0,0,0,.3)),
+    url(../../imagenes/foto_marce/blanco_y_negro/6.jpg);
     @include sizes_wh(auto, 650px);
     background-size: map-get($mapa, cubrir);
 }
@@ -751,7 +755,8 @@ header {
 /* INICIO - BLOG */
 
 #contenedorImgSup7{
-    background-image: url(../../imagenes/foto_marce/blanco_y_negro/foto_marce3.jpg);
+    background: linear-gradient(to left, rgba(0, 0, 0, .3),rgba(0,0,0,.2),rgba(0,0,0,.3)),
+    url(../../imagenes/foto_marce/blanco_y_negro/foto_marce3.jpg);
     @include sizes_wh(auto, 650px);
     background-size: cover;
     background-position: -10px -360px;
